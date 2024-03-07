@@ -14,7 +14,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 COPY . .
 
-ENV HF_HOME=/Langchain-Chatchat/huggingface_cache
+# ENV HF_HOME=/Langchain-Chatchat/huggingface_cache
 
 EXPOSE 8501
 EXPOSE 7861

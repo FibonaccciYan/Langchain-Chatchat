@@ -193,7 +193,7 @@ $ python startup.py -a
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white "langchain-chatglm")](https://t.me/+RjliQ3jnJ1YyN2E9)
 
 ### 项目交流群
-<img src="img/qr_code_89.jpg" alt="二维码" width="300" />
+<img src="img/qr_code_95.jpg" alt="二维码" width="300" />
 
 🎉 Langchain-Chatchat 项目微信交流群，如果你也对本项目感兴趣，欢迎加入群聊参与讨论交流。
 
@@ -202,3 +202,16 @@ $ python startup.py -a
 <img src="img/official_wechat_mp_account.png" alt="二维码" width="300" />
 
 🎉 Langchain-Chatchat 项目官方公众号，欢迎扫码关注。
+
+# Docker 
+
+1. Docker build:
+```bash
+DOCKER_BUILDKIT=1 docker build -t fibonacciyan/chatchat:v1.1 . --build-arg https_proxy=$http_proxy --buil
+d-arg http_proxy=$http_proxy --build-arg HTTP_PROXY=$http_proxy --build-arg HTTPS_PROXY=$http_proxy --build-arg NO_PROXY=$no_proxy  --build-arg no_prox
+y=$no_proxy
+```
+2. Docker run:
+```bash
+docker run -it -p 8501:8501 --gpus "device=2" -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all -v /data/ysy/LLM/RAG/Langchain-Chatchat/bge-large-zh-v1.5:/Langchain-Chatchat/bge-large-zh-v1.5 -v /data/ysy/LLM/RAG/Langchain-Chatchat/chatglm3-6b:/Langchain-Chatchat/chatglm3-6b fibonacciyan/chatchat:v1.1
+```
