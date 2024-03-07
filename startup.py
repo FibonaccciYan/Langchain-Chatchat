@@ -8,6 +8,8 @@ from datetime import datetime
 from pprint import pprint
 from langchain_core._api import deprecated
 
+# os.environ["CUDA_VISIBLE_DEVICES"]='5'
+
 try:
     import numexpr
 
